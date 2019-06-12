@@ -34,6 +34,7 @@ print ("""
         var23=document.getElementById("radio23");
         var24=document.getElementById("radio24");
         var25=document.getElementById("radio25");
+        var26=document.getElementById("radio26");
         if(var1.checked==true)
         {
             document.myform.action="/cgi-bin/parsed_stats.py";
@@ -74,7 +75,7 @@ print ("""
         {
             document.myform.action="/cgi-bin/license.py";
         }
-        else if(var11.checked==true||var12.checked==true||var13.checked==true||var14.checked==true||var15.checked==true||var16.checked==true||var17.checked==true||var18.checked==true||var23.checked==true||var24.checked==true||var25.checked==true)
+        else if(var11.checked==true||var12.checked==true||var13.checked==true||var14.checked==true||var15.checked==true||var16.checked==true||var17.checked==true||var18.checked==true||var23.checked==true||var24.checked==true||var25.checked==true|var26.checked==true)
         {
             document.myform.action="/cgi-bin/config.py";
         }
@@ -171,6 +172,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
                 <input type="radio" id="radio15" name = "option" value = "SE"> Service Engine <br />
                 <input type="radio" id="radio17" name = "option" value = "SEGroup"> SE Group <br />
                 <input type="radio" id="radio13" name = "option" value = "GSLB"> GSLB <br />
+                <input type="radio" id="radio26" name = "option" value = "GSLBSite"> GSLBSite  <br />
                 <input type="radio" id="radio16" name = "option" value = "PoolGroup"> PoolGroup <br />
                 <input type="radio" id="radio23" name = "option" value = "WafProfile"> WAF Profile <br />
                 <input type="radio" id="radio24" name = "option" value = "Tenant"> Tenant <br />

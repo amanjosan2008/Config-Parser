@@ -61,9 +61,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 }
 </style>
 
-<script src="/json-browse/jquery-3.4.1.slim.js"></script>
-<script src="/json-browse/jquery.json-browse.js"></script>
-<link href="/json-browse/jquery.json-browse.css"rel="stylesheet">
+<script src="/tech_support/json-browse/jquery-3.4.1.slim.js"></script>
+<script src="/tech_support/json-browse/jquery.json-browse.js"></script>
+<link href="/tech_support/json-browse/jquery.json-browse.css"rel="stylesheet">
 
 <script type="text/javascript">
 

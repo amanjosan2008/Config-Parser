@@ -48,7 +48,9 @@ try:
     elif option == "SEGroup":
         cfg = str(convert(config["ServiceEngineGroup"]))
     elif option == "GSLB":
-        cfg = str(convert(config["GSLB"]))
+        cfg = str(convert(config["Gslb"]))
+    elif option == "GSLBSite":
+        cfg = str(convert(config["GslbSite"]))
     elif option == "PoolGroup":
         cfg = str(convert(config["PoolGroup"]))
     elif option == "WafProfile":
@@ -60,9 +62,13 @@ try:
     else:
         cfg = str(["Wrong Key: Config "+ option +" not Found." ])
 except KeyError:
-    cfg = str(["KeyError: Key -"+ option +" not Found in Config." ])
+    cfg = str(["KeyError: Key - "+ option +" not Found in Config." ])
 except NameError:
     cfg = str(["NameError: Config file not Found in the above path." ])
+
+#if cfg == "[]":
+#    cfg = str(["Error: Key - "+ option +" not Found in Config." ])
+
 
 print("Content-Type: text/html;charset=utf-8\r\n\r\n")
 
@@ -88,9 +94,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 }
 </style>
 
-<script src="/json-browse/jquery-3.4.1.slim.js"></script>
-<script src="/json-browse/jquery.json-browse.js"></script>
-<link href="/json-browse/jquery.json-browse.css"rel="stylesheet">
+<script src="/tech_support/json-browse/jquery-3.4.1.slim.js"></script>
+<script src="/tech_support/json-browse/jquery.json-browse.js"></script>
+<link href="/tech_support/json-browse/jquery.json-browse.css"rel="stylesheet">
 <script type="text/javascript">
 $(function() {
   $('#btn-json-browse').click(function() {
@@ -139,7 +145,10 @@ print("""<p>
 
 try:
     if config:
-            #print("Avi Config found!  Processing.. ")
+        #print("Avi Config found!  Processing.. ")
+        if cfg == "[]":
+            print("<h3>\n", option , "Config not found\n</h3>")
+        else:
             print('<pre id="json-renderer" class="json-body"></pre>')
     else:
             print("<h3>\nAvi Config not found\n</h3>")
